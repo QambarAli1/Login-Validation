@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body onload="getCurrentUser()">
+
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-3 m-0 p-0" id="userDashboard">
+        <div class="pos-f-t">
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <button type="button" class="btn btn-danger" onclick="onLogout()">Logout</button>
+          </nav>
+          <div class="collapse bg-dark" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <div class="profileImage">
+                <img src="1.jpg" alt="">
+              </div>
+              <div>
+                <h4 id="detial" class="text-white"></h4>
+              </div>
+              <div class="icon-and-des">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                <span class="text-white" id="currentUserName"></span>
+              </div>
+              <div class="icon-and-des">
+                <i class="fa fa-envelope text-white" aria-hidden="true"></i>
+                <span class="text-white" id="currentUserEmail"></span>
+              </div>
+              <div class="icon-and-des">
+                <i class="fa fa-map-marker text-white" aria-hidden="true"></i>
+                <span class="text-white" id="currentUserAddress"></span>
+              </div>
+              <div class="icon-and-des">
+                <i class="fa fa-phone text-white" aria-hidden="true"></i>
+                <span class="text-white" id="currentUserNumber"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-9 position-relative bg-secondary " id="home">
+        <h1 class="homepage">
+          HOME PAGE
+        </h1>
+
+
+        <div class="post">
+          <!-- Create Post  -->
+          <div class="p-4" id="createPost">
+            <h1>CREATE POST HERE  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1>
+            <form onsubmit="return false">
+              <div class="form-group">
+                <label for="title" class="font-weight-bold">Title</label>
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp"
+                  placeholder="Enter Title For Post">
+              </div>
+              <div class="form-group">
+                <label for="description" class="font-weight-bold">Description</label>
+                <textarea type="description" class="form-control" id="description" placeholder="description" cols="30"
+                  rows="5"></textarea>
+
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="post()">Post</button>
+            </form>
+            <div  class="position-fixed">
+              <a href="#home"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+            </div>
+          </div>
+           
+          <!-- Post Items here -->
+          <div id="postItem">
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

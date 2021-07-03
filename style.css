@@ -1,0 +1,74 @@
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.profileImage{
+   width: 120px;
+   height: 100px;
+}
+.profileImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#navbarToggleExternalContent{
+    min-height: 100vh ;
+}
+.icon-and-des{
+    margin-top: 30px;
+    font-size: 20px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-and-des{
+        font-size: 20px !important;
+    }
+    #navbarToggleExternalContent{
+    height: 50vh !important;
+    }
+  }
+.homepage{
+    color: black !important;
+}
+#home{
+    height: 56px !important;
+    text-align: center;
+}
+.post{
+    width: 900px !important;
+    margin-left: 50px !important;
+}
+#createPost{
+    width: 60%!important;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+}
+#createPost a{
+    /* position: fixed; */
+    margin-left: 800px !important;
+    margin-top: 400px !important;
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+}
+#postItem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.loginDiv{
+    margin-top: 50px;
+    padding: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.signupDiv{
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+    color:  white !important;
+}
+  
